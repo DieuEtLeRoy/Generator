@@ -1,10 +1,17 @@
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class Citation {
 
 	private int id;
 	private String contenu;
-	private String auteur;
-	private String date;
-	private String source;
+	private int auteur_id;
+	private int source_id;
 
 	public void Citation() {
 
@@ -21,16 +28,27 @@ public class Citation {
 	public String getContenu() {
 		return this.contenu;
 	}
-
-	public String getAuteur() {
-		return this.auteur;
+	
+	public int getAuteurId() {
+		return this.auteur_id;
 	}
-
-	public String getSource() {
-		return (this.source.equals("")) ? "null" : this.source;
+	
+	public int getSourceId() {
+		return this.source_id;
 	}
 
 	public String toString() {
-		return "{id : " + id + ", auteur : " + auteur + ", date : " + date + ", source : " + source + " , contenu : " + contenu + "}";
+		return "{id : " + id + ", auteur_id : " + auteur_id + ", source_id : " + source_id + ", contenu : " + contenu + "}";
+	}
+	
+
+	
+	public void replace(File file) throws IOException {
+		Path path = Paths.get(file.getAbsolutePath());
+		Charset charset = StandardCharsets.UTF_8;
+		String content = new String(Files.readAllBytes(path), charset);
+		content = content.replaceAll(":citation_contenu", this.getContenu());
+		content = content.replaceAll(":citation_id", this.getIdString());
+		Files.write(path, content.getBytes(charset));
 	}
 }
