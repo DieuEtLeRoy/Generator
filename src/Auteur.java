@@ -18,6 +18,7 @@ public class Auteur {
 		this.id = 0;
 		this.nom = " ";
 		this.prenom = " ";
+		this.titre = " ";
 	}
 
 	public int getId() {
@@ -36,6 +37,10 @@ public class Auteur {
 		return this.prenom;
 	}
 
+	public String getTitre() {
+		return this.titre;
+	}
+	
 	public String toString() {
 		return "{id : " + id + ", titre : " + titre + ", nom : " + nom + ", prenom : " + prenom + "}";
 	}
@@ -48,6 +53,7 @@ public class Auteur {
 		String content = new String(Files.readAllBytes(path), charset);
 		content = content.replaceAll(":auteur_nom", this.getNom());
 		content = content.replaceAll(":auteur_prenom", this.getPrenom());
+		content = content.replaceAll(":auteur_titre", this.getTitre());
 		content = content.replaceAll(":auteur_id", this.getIdString());
 		Files.write(path, content.getBytes(charset));
 	}
