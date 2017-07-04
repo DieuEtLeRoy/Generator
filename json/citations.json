@@ -2,207 +2,172 @@
 [
 	{
 		"id": "1",
-		"auteur_id" : "1",
 		"contenu": "L'ennui de l'élection, c'est qu'on élit les gens qui ont les qualités nécessaires pour se faire élire, lesquelles sont généralement complètement opposées à celles dont on a besoin pour gouverner.", 
 		"source_id" : "8"
 	},
 	{
 		"id": "2",
-		"auteur_id" : "2",
 		"contenu": "Le principe royal ne repose pas sur la foi que l'on a ou que l'on n'a pas en lui. Il importe peu qu'on y croie ou que l'on n'y croie plus, et que les incrédules soient innombrables. Cela ne peut se peser. Dieu est Dieu, et le roi est le roi.", 
 		"source_id" : "2"
 	},
 	{
 		"id": "3",
-		"auteur_id" : "3",
 		"contenu": "Le christianisme a été prêché par des ignorants et cru par des savants, et c'est en quoi il ne ressemble à rien de connu.", 
 		"source_id" : "3"
 	},
 	{
 		"id": "4",
-		"auteur_id" : "4",
 		"contenu": "Être Roi par la grâce de Dieu ne transformait pas l'Oint du Seigneur en despote ou en créature supérieure. Bien au contraire, Il devait être le plus humble et le plus grand des débiteurs de Dieu, qui demande toujours beaucoup à ceux à qui il a beaucoup donné.", 
 		"source_id" : "4"
 	},
 	{
 		"id": "5",
-		"auteur_id" : "5",
 		"contenu": "Je désire que mon sang ne retombe jamais sur la France", 
 		"source_id" : "5"
 	},
 	{
 		"id": "6",
-		"auteur_id" : "1",
 		"contenu": "Ce sont souvent les mêmes qui veulent la mort des innocents et la survie des coupables.", 
 		"source_id" : "6"
 	},
 	{
 		"id": "7",
-		"auteur_id" : "1",
 		"contenu": "Le degré de civilisation d'une société se mesure au respect que les hommes y montrent aux femmes", 
 		"source_id" : "6"
 	},
 	{
 		"id": "8",
-		"auteur_id" : "1",
 		"contenu": "Quand des étrangers en armes marchent sur le sol de votre pays, il n'y a pas moyen de ne pas les tuer. Au contraire, une chose qui n'a pas encore vu la lumière du soleil, qui se trouve à votre merci et qui, loin de vous être étrangère, est tissée de vous...", 
 		"source_id" : "6"
 	},
 	{
 		"id": "9",
-		"auteur_id" : "1",
 		"contenu": "Le respect des femmes est la clef de ce qui fut notre civilisation.", 
 		"source_id" : "6"
 	},
 	{
 		"id": "10",
-		"auteur_id" : "6",
 		"contenu": "Nos vies et nos biens sont à nos roys, l'âme est à Dieu et l'honneur à nous car sur mon honneur mon roy ne peut rien.", 
 		"source_id" : "7"
 	},
 	{
 		"id": "11",
-		"auteur_id" : "1",
 		"contenu": "La beauté de la France, c'est que si tous les Français disparaissaient demain, elle subsisterait dans l'amalgame historique des paysages.", 
 		"source_id" : "6"
 	},
 	{
 		"id": "12",
-		"auteur_id" : "1",
 		"contenu": "Toute culture est un héritage, et l'héritage implique des morts qui ont testé et des hoirs qui bénéficient.", 
 		"source_id" : "6"
 	},
 	{
 		"id": "13",
-		"auteur_id" : "1",
 		"contenu": "On naissait où on pouvait, on mourrait où on devait, mais on se faisait sacrer à Reims et enterrer à Saint-Denis", 
 		"source_id" : "6"
 	},
 	{
 		"id": "14",
-		"auteur_id" : "1",
 		"contenu": "Le mal qu'ont commis la royauté, la noblesse, les corporations, il y aurra toujours assez de redresseurs de torts pour les dénoncer, et cela est peut-être juste. Mais il serait niais de supposer qu'elles n'ont commis que du mal", 
 		"source_id" : "6"
 	},
 	{
 		"id": "15",
-		"auteur_id" : "1",
 		"contenu": "Notre Seigneur dit qu'on ne peut servir deux maîtres à la fois [...]. Parce que, précise-t-il, on ne pourrait pas les aimer autant l'un que l'autre. Servir suppose donc aimer. On est loin de la lutte des classes.", 
 		"source_id" : "6"
 	},
 	{
 		"id": "16",
-		"auteur_id" : "1",
 		"contenu": "C'est triste à dire à ceux qui aiment l'égalité, mais l'égalité est stérile. Ce qui est fécond, ce qui crée un appel d'air, ce sont des différences de températures favorisant les mouvements verticaux.", 
 		"source_id" : "6"
 	},
 	{
 		"id": "17",
-		"auteur_id" : "1",
 		"contenu": "C'est la trinité Voltaire-Robespierre-Napoléon, l'idole de la France chauvine qui prétendait apprendre à vivre aux rois et aux peuples, mais qui ne savait pas distinguer, dans son propre empire colonial, entre les cannibales de l'A.E.F. et les poètes d'Indochine, la France qui a exilé ses princes et persécuté Dreyfus, la France de M. Homais et de (ses) postières hargneuses, la France qui croyait que la fraternité est possible sans la paternité, qu'Abel et Caïn se seraient mieux entendus si, d'un commun accord, ils avaient coupé le cou d'Adam, la France oedipienne de 93.", 
 		"source_id" : "6"
 	},
 	{
 		"id": "18",
-		"auteur_id" : "7",
 		"contenu": "C'est une grave erreur de croire qu'on honore sa patrie en calomniant ceux qui l'ont fondée", 
 		"source_id" : "1"
 	},
 	{
 		"id": "19",
-		"auteur_id" : "8",
 		"contenu": "Le nom de tradition ne veut pas dire la transmission de n'importe quoi. C'est la transmission du beau et du vrai. Le nom de révolution ne veut pas dire brusque changement quel qu'il soit. Il signifie quelque chose comme cela, et, de plus, autre chose&#xA0;: l'abaissement du supérieur par l'inférieur.", 
 		"source_id" : "9"
 	},
 	{
 		"id": "20",
-		"auteur_id" : "9",
 		"contenu": "Je pense aujourd'hui plus que jamais que vous devriez utiliser le beau talent que Dieu vous a donné pour Sa plus grande gloire. Tout ce que vous avez, tout ce que vous êtes, tout ce que vous pouvez devenir et faire que ce soit pour LUI, et pour LUI seul.", 
 		"source_id" : "10"
 	},
 	{
 		"id": "21",
-		"auteur_id" : "10",
 		"contenu": "Il [Le Roy] n'est pas né pour lui-même, mais pour moi et son peuple", 
 		"source_id" : "11"
 	},
 	{
 		"id": "22",
-		"auteur_id" : "11",
 		"contenu": "Je puis être triste de voir un grand parti, qu'il soit socialiste ou libéral, décevoir, dans la peur qu'il a de devoir un jour trancher avec des équivoques, d'un bord ou de l'autre, qui ont semblé faire sa grandeur, mais qui l'ont vidé de sa capacité d'énergie.", 
 		"source_id" : "12"
 	},
 	{
 		"id": "23",
-		"auteur_id" : "12",
 		"contenu": "L'idée aristocratique exige la domination réelle des meilleurs ; la démocratie, la domination formelle de tous... Tout ordre vital est hiérarchique, il a son aristocratie. Seul un amas de décombres n'est pas hiérarchisé et aucune qualité aristocratique ne s'en dégage... Se reconnaître, se vouloir, se chercher toujours plus de devoirs est une attitude aristocratique. Réclamer des droits est une attitude commune. L'aristocratie n'est pas une classe, c'est un principe spirituel.", 
 		"source_id" : "13"
 	},
 	{
 		"id": "24",
-		"auteur_id" : "2",
 		"contenu": "Je ne me souviens plus des noms des chefs politiques du moment. Je les ai oubliés, volontairement […]. Je ne me souviens que des visages. L'injure, l'ambition, la mauvaise foi, l'outrecuidance, le mépris des autres, la haine s'y lisaient à livre ouvert. Si on les réunissait ensemble, ils se déchiraient. Puis s'en allaient prendre la tête d'immenses cortèges à leur image. […] Pendant quarante jours ils se battirent de cette étrange façon et leur combat ne fit qu'un seul mort dont personne ne pleura le cadavre. Ce mort était une morte. Elle s'appelait&#xA0;: la dignité.",
 		"source_id" : "14"
 	},
 	{
 		"id": "25",
-		"auteur_id" : "1",
 		"contenu": "Il y a deux formes de racisme. L'une consiste à éliminer les races qui ne sont pas la sienne. L'autre à éliminer les races, la sienne comprise en les mélangeant.",
 		"source_id" : "15"
 	},
 	{
 		"id": "26",
-		"auteur_id" : "13",
 		"contenu": "Remettre la décision des questions les plus graves aux foules, nécessairement inintelligentes et passionnées, n'est-ce pas se livrer au hasard et courir volontairement à l'abîme&#xA0;? Oui, le suffrage universel mériterait plutôt le nom de folie universelle&#xA0;; et quand les sociétés secrètes s'en emparent, comme il arrive trop souvent, celui de mensonge universel.",
 		"source_id" : "16"
 	},
 	{
 		"id": "27",
-		"auteur_id" : "2",
 		"contenu": "Ce n'est pas un malheur que de devenir roi de France. Ce n'est pas un bonheur non plus. Peut-être est-ce un honneur, un devoir, une charge, une mission, mais cela n'a plus d'importance. Le roi est roi, comme l'eau est l'eau, comme le feu est le feu.", 
 		"source_id" : "2"
 	},
 	{
 		"id": "28",
-		"auteur_id" : "14",
 		"contenu": "Dans le train des choses morales et le cours de l'humaine société, la perfection consiste en ce que chaque partie garde le rang qu'elle y doit tenir et accomplit les fonctions qu'elle y doit faire. En effet, quand les hommes s'attachent invariablement à leur devoir et s'efforcent de remplir les obligations sous lesquelles ils viennent ou prennent place dans le monde, il n'y a point d'harmonie si excellente en la nature", 
 		"source_id" : "17"
 	},
 	{
 		"id": "29",
-		"auteur_id" : "2",
 		"contenu": "Pourquoi le roi de France serait-il moins fondé de s'insurger contre la République que nos deux premières républiques ne le furent en chassant par les armes, et dans le sang un roi de France et un roi des Français ?", 
 		"source_id" : "18"
 	},
 	{
 		"id": "30",
-		"auteur_id" : "2",
 		"contenu": "La grâce divine qui a fait les rois de France est un flux continu qui échappe au pouvoir des hommes. Elle est éternellement transmissible chez ceux que Dieu a choisis. Elle ne peut être interrompue. On peut couper la tête des rois chrétiens, les chasser, les oublier, la grâce divine court toujours...", 
 		"source_id" : "18"
 	},
 	{
 		"id": "31",
-		"auteur_id" : "15",
 		"contenu": "Le signe le plus évident de la décadence d'une société bourgeoise malade est le désir du nivellement accompagné du refus d'encourager l'effort", 
-		"source_id" : "1"
+		"source_id" : "21"
 	},
 	{
 		"id": "32",
-		"auteur_id" : "16",
 		"contenu": "Une génération obsédée par la sécurité de l'emploi ne ferait pas avancer d'un pas l'humanité", 
 		"source_id" : "19"
 	},
 	{
 		"id": "33",
-		"auteur_id" : "17",
 		"contenu": "Je ne remettrai à personne du poison, si on m'en demande, ni ne prendrai l'initiative d'une pareille suggestion&#xA0;; semblablement, je ne remettrai à aucune femme un pessaire abortif.", 
 		"source_id" : "20"
 	},
 	{
 		"id": "34",
-		"auteur_id" : "16",
 		"contenu": "Ils ont supprimé l'enseignement de la morale à l'école […]. Du même coup, ils ont balayé l'instruction civique. Toute référence au Devoir avec un grand D, sous une forme quelconque, devient un viol de conscience&#xA0;; toute allusion à la nation, à la patrie, est inconvenante, obscène. Le résultat, c'est que vous ne croyez plus à rien&#xA0;; que vous êtes démobilisés au sens le plus large du terme&#xA0;; que l'amour est devenue une gymnastique suédoise&#xA0;; que vous prenez la pilule à quinze ans avec la bénédiction des Pouvoirs&#xA0;; que vous divorcez librement pour un oui ou pour un non&#xA0;; que vous avortez comme on se mouche.", 
-		"source": "Laurent",
 		"source_id" : "19"
 	}
 ]
