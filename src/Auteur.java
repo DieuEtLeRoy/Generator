@@ -47,14 +47,20 @@ public class Auteur {
 	
 
 	
-	public void replace(File file) throws IOException {
+	public void replace(File file) {
 		Path path = Paths.get(file.getAbsolutePath());
 		Charset charset = StandardCharsets.UTF_8;
-		String content = new String(Files.readAllBytes(path), charset);
-		content = content.replaceAll(":auteur_nom", this.getNom());
-		content = content.replaceAll(":auteur_prenom", this.getPrenom());
-		content = content.replaceAll(":auteur_titre", this.getTitre());
-		content = content.replaceAll(":auteur_id", this.getIdString());
-		Files.write(path, content.getBytes(charset));
+		String content = "";
+		try {
+			content = new String(Files.readAllBytes(path), charset);
+			content = content.replaceAll(":auteur_nom", this.getNom());
+			content = content.replaceAll(":auteur_prenom", this.getPrenom());
+			content = content.replaceAll(":auteur_titre", this.getTitre());
+			content = content.replaceAll(":auteur_id", this.getIdString());
+			Files.write(path, content.getBytes(charset));
+		} catch (IOException e) {
+			System.out.println("ERREUR -- Lecture du fichier : " + path);
+			e.printStackTrace();
+		}
 	}
 }

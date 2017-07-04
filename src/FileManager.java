@@ -2,6 +2,7 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,16 +11,29 @@ import java.io.StringWriter;
 
 
 public class FileManager {
-	public static void copyFile(File src, File dest, boolean keep) throws IOException {
-		InputStream in = new BufferedInputStream(new FileInputStream(src));
-		OutputStream out = new BufferedOutputStream(new FileOutputStream(dest, keep));
-		byte[] buf = new byte[4096];
-		int n;
-		while ((n = in.read(buf, 0, buf.length)) > 0){
-			out.write(buf, 0, n);	
+	public static void copyFile(File src, File dest, boolean keep){
+		
+		InputStream in = null;
+		OutputStream out = null;
+		try {
+			in = new BufferedInputStream(new FileInputStream(src));
+			out = new BufferedOutputStream(new FileOutputStream(dest, keep));
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		}
-		in.close();
-		out.close();
+
+		try {
+			byte[] buf = new byte[4096];
+			int n;
+			while ((n = in.read(buf, 0, buf.length)) > 0){
+				out.write(buf, 0, n);	
+			}
+			in.close();
+			out.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 

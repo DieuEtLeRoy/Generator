@@ -16,7 +16,7 @@ public class Main {
 	static int nbAuteur = 0;
 	static int nbSource = 0;
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args){
 		
 		GsonBuilder builder = new GsonBuilder();
 		Gson gson = builder.create();

@@ -10,7 +10,7 @@ public class Citation {
 
 	private int id;
 	private String contenu;
-	private int auteur_id;
+
 	private int source_id;
 
 	public void Citation() {
@@ -29,26 +29,30 @@ public class Citation {
 		return this.contenu;
 	}
 	
-	public int getAuteurId() {
-		return this.auteur_id;
-	}
+
 	
 	public int getSourceId() {
 		return this.source_id;
 	}
 
 	public String toString() {
-		return "{id : " + id + ", auteur_id : " + auteur_id + ", source_id : " + source_id + ", contenu : " + contenu + "}";
+		return "{id : " + id + ", source_id : " + source_id + ", contenu : " + contenu + "}";
 	}
 	
 
 	
-	public void replace(File file) throws IOException {
+	public void replace(File file){
 		Path path = Paths.get(file.getAbsolutePath());
 		Charset charset = StandardCharsets.UTF_8;
-		String content = new String(Files.readAllBytes(path), charset);
-		content = content.replaceAll(":citation_contenu", this.getContenu());
-		content = content.replaceAll(":citation_id", this.getIdString());
-		Files.write(path, content.getBytes(charset));
+		String content = "";
+		try {
+			content = new String(Files.readAllBytes(path), charset);
+			content = content.replaceAll(":citation_contenu", this.getContenu());
+			content = content.replaceAll(":citation_id", this.getIdString());
+			Files.write(path, content.getBytes(charset));
+		} catch (IOException e) {
+			System.out.println("ERREUR -- Lecture du fichier : " + path);
+			e.printStackTrace();
+		}
 	}
 }

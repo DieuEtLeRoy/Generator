@@ -16,7 +16,7 @@ public class htmlGenerator {
 	static final String PATH_SOURCE = SITE_PATH + "source_";
 	
 	
-	public static void generate(Model model) throws IOException{
+	public static void generate(Model model){
 		final long startTime = System.currentTimeMillis();
 		System.out.println("---- DEBUT DE LA GENERATION DES PAGES STATIQUES ------");
 		
@@ -39,7 +39,7 @@ public class htmlGenerator {
 	}
 	
 	
-	public static int generateIndex(Model model) throws IOException{
+	public static int generateIndex(Model model){
 		System.out.println("INDEX - DEBUT");
 		File index = new File(SITE_PATH + "index.html");
 		FileManager.copyFile(TEMPLATE_HEADER, index, false);
@@ -47,11 +47,14 @@ public class htmlGenerator {
 			System.out.println("	citation : " + c.getId());
 			File tempo = new File("temp");
 			FileManager.copyFile(TEMPLATE_INDEX_TOREPEAT, tempo, false);
-			c.replace(tempo);
-			Auteur a = model.getAuteurs().getById(c.getAuteurId());
-			a.replace(tempo);
+			
 			Source s = model.getSources().getById(c.getSourceId());
+			Auteur a = model.getAuteurs().getById(s.getAuteurId());
+			
+			c.replace(tempo);
+			a.replace(tempo);
 			s.replace(tempo);
+			
 			FileManager.copyFile(tempo, index, true);
 			tempo.delete();
 		}
@@ -59,7 +62,8 @@ public class htmlGenerator {
 		System.out.println("INDEX - FIN");
 		return 0;
 	}
-	public static int generateCitation(Model model) throws IOException{
+	
+	public static int generateCitation(Model model){
 		int count = 0;
 		System.out.println("CITATIONS - DEBUT");
 		// Pour chaque citation on crée la page HTML associée en complétant le template
@@ -69,10 +73,12 @@ public class htmlGenerator {
 			FileManager.copyFile(TEMPLATE_HEADER, out, false);
 			FileManager.copyFile(TEMPLATE_CITATION, out, true);
 			FileManager.copyFile(TEMPLATE_FOOTER, out, true);
-			c.replace(out);
-			Auteur a = model.getAuteurs().getById(c.getAuteurId());
-			a.replace(out);
+
 			Source s = model.getSources().getById(c.getSourceId());
+			Auteur a = model.getAuteurs().getById(s.getAuteurId());
+			
+			c.replace(out);
+			a.replace(out);
 			s.replace(out);
 			count++;
 		}
@@ -80,7 +86,7 @@ public class htmlGenerator {
 		return count;
 	}
 	
-	public static int generateSource(Model model) throws IOException{
+	public static int generateSource(Model model){
 		int count = 0;
 		System.out.println("SOURCES - DEBUT");
 		// Pour chaque sources on crée la page HTML associée en complétant le template
@@ -98,7 +104,7 @@ public class htmlGenerator {
 		
 		return count;
 	}
-	public static int generateAuteur(Model model) throws IOException{
+	public static int generateAuteur(Model model){
 		int count = 0;
 		System.out.println("AUTEURS - DEBUT");
 		// Pour chaque auteur on crée la page HTML associée en complétant le template
