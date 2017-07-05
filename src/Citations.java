@@ -1,19 +1,30 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Citations {
 
-	private Citation[] citations;
+	private ArrayList<Citation> citations;
 
 	public void Citations() {
 
 	}
 
 	public String toString() {
-		return "citations : " + Arrays.toString(this.citations);
+		return "citations : " + this.citations.toString();
 	}
 
-	public Citation[] getCitations() {
+	public ArrayList<Citation> getCitations() {
 		return citations;
 
 	}
+
+	public ArrayList<Citation> getCitationsBySourceId(int id) {
+		ArrayList<Citation> cs = new ArrayList<Citation>();
+		for(Citation c : this.citations){
+			if(c.getSourceId() == id){
+				cs.add(c);
+			}
+		}
+		return (cs);
+	}
+
 }

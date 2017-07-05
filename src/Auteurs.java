@@ -1,18 +1,18 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Auteurs {
 
-	private Auteur[] auteurs;
+	private ArrayList<Auteur> auteurs;
 
 	public void Auteurs() {
 
 	}
 
 	public String toString() {
-		return "auteurs : " + Arrays.toString(this.auteurs);
+		return "auteurs : " + this.auteurs.toString();
 	}
 
-	public Auteur[] getAuteurs() {
+	public ArrayList<Auteur> getAuteurs() {
 		return auteurs;
 
 	}

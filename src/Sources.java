@@ -1,18 +1,18 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Sources {
 
-	private Source[] sources;
+	private ArrayList<Source> sources;
 
 	public void Sources() {
 
 	}
 
 	public String toString() {
-		return "sources : " + Arrays.toString(this.sources);
+		return "sources : " + this.sources.toString();
 	}
 
-	public Source[] getSources() {
+	public ArrayList<Source> getSources() {
 		return sources;
 
 	}
@@ -24,6 +24,17 @@ public class Sources {
 			}
 		}
 		return (new Source());
+	}
+
+	
+	public ArrayList<Source> getSourcesByAuteurId(int id) {
+		ArrayList<Source> ss = new ArrayList<Source>();
+		for(Source s : this.sources){
+			if(s.getAuteurId() == id){
+				ss.add(s);
+			}
+		}
+		return (ss);
 	}
 	
 }
