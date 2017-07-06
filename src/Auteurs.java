@@ -25,4 +25,11 @@ public class Auteurs {
 		}
 		return (new Auteur());
 	}
+
+	public void init() {
+		for(Auteur a : this.auteurs){
+			a.init();
+		}
+		
+	}
 }

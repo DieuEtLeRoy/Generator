@@ -36,5 +36,12 @@ public class Sources {
 		}
 		return (ss);
 	}
+
+	public void init() {
+		for(Source s : this.sources){
+			s.init();
+		}
+		
+	}
 	
 }

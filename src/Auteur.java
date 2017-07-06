@@ -12,13 +12,14 @@ public class Auteur {
 	private String nom;
 	private String prenom;
 	private String titre;
+	private String slug;
 
 
 	public void Auteur() {
 		this.id = 0;
-		this.nom = " ";
-		this.prenom = " ";
-		this.titre = " ";
+		this.nom = "";
+		this.prenom = "";
+		this.titre = "";
 	}
 
 	public int getId() {
@@ -41,6 +42,10 @@ public class Auteur {
 		return this.titre;
 	}
 	
+	public String getSlug() {
+		return this.slug;
+	}
+	
 	public String toString() {
 		return "{id : " + id + ", titre : " + titre + ", nom : " + nom + ", prenom : " + prenom + "}";
 	}
@@ -57,10 +62,29 @@ public class Auteur {
 			content = content.replaceAll(":auteur_prenom", this.getPrenom());
 			content = content.replaceAll(":auteur_titre", this.getTitre());
 			content = content.replaceAll(":auteur_id", this.getIdString());
+			content = content.replaceAll(":auteur_slug", this.getSlug());
 			Files.write(path, content.getBytes(charset));
 		} catch (IOException e) {
 			System.out.println("ERREUR -- Lecture du fichier : " + path);
 			e.printStackTrace();
 		}
+	}
+
+	public void init() {
+		//this.slug = this.titre + "-" + this.prenom + "-" + this.nom; 
+		this.slug = "";
+		if(!this.titre.equals("") && !this.titre.equals(" ")){
+			this.slug += this.titre + "-";
+		}
+		if(!this.prenom.equals("") && !this.prenom.equals(" ")){
+			this.slug += this.prenom + "-";
+		}
+		if(!this.nom.equals("") && !this.nom.equals(" ")){
+			this.slug += this.nom + "-";
+		}
+		this.slug += "auteur_" + this.id;
+		this.slug = this.slug.replace(' ', '-');
+		this.slug = this.slug.replace('\'', '-');
+		this.slug = this.slug.toLowerCase();
 	}
 }

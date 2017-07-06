@@ -27,4 +27,10 @@ public class Citations {
 		return (cs);
 	}
 
+	public void init() {
+		for(Citation c : this.citations){
+			c.init();
+		}
+	}
+
 }

@@ -14,9 +14,9 @@ public class htmlGenerator {
 	static final File TEMPLATE_SOURCE = new File(TEMPLATE_PATH + "source.html");
 	
 	static final String SITE_PATH = "site/";
-	static final String PATH_CITATION = SITE_PATH + "citation_";
-	static final String PATH_AUTEUR = SITE_PATH + "auteur_";
-	static final String PATH_SOURCE = SITE_PATH + "source_";
+	static final String PATH_CITATION = SITE_PATH;
+	static final String PATH_AUTEUR = SITE_PATH;
+	static final String PATH_SOURCE = SITE_PATH;
 	
 	
 	public static void generate(Model model){
@@ -72,7 +72,7 @@ public class htmlGenerator {
 		// Pour chaque citation on crée la page HTML associée en complétant le template
 		for (Citation c : model.getCitations().getCitations()) {
 			System.out.println("	citation : " + c.getId());
-			File out = new File(PATH_CITATION + c.getIdString() + ".html");
+			File out = new File(PATH_CITATION + c.getSlug() + ".html");
 			FileManager.copyFile(TEMPLATE_HEADER, out, false);
 			FileManager.copyFile(TEMPLATE_CITATION, out, true);
 			FileManager.copyFile(TEMPLATE_FOOTER, out, true);
@@ -95,7 +95,7 @@ public class htmlGenerator {
 		// Pour chaque sources on crée la page HTML associée en complétant le template
 		for (Source s : model.getSources().getSources()) {
 			System.out.println("	source : " + s.getId());
-			File out = new File(PATH_SOURCE + s.getIdString() + ".html");
+			File out = new File(PATH_SOURCE + s.getSlug() + ".html");
 			FileManager.copyFile(TEMPLATE_HEADER, out, false);
 			FileManager.copyFile(TEMPLATE_SOURCE, out, true);
 			//Affichage des citations issues de cette source
@@ -123,7 +123,7 @@ public class htmlGenerator {
 		// Pour chaque auteur on crée la page HTML associée en complétant le template
 		for (Auteur a : model.getAuteurs().getAuteurs()) {
 			System.out.println("	auteur : " + a.getId());
-			File out = new File(PATH_AUTEUR + a.getIdString() + ".html");
+			File out = new File(PATH_AUTEUR + a.getSlug() + ".html");
 			FileManager.copyFile(TEMPLATE_HEADER, out, false);
 			FileManager.copyFile(TEMPLATE_AUTEUR, out, true);
 			//Affichage des ouvrages de l'auteur

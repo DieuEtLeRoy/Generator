@@ -26,16 +26,19 @@ public class Main {
 		//Récupération des citations
 		data = FileManager.loadFile(JSON_CITATIONS);
 		final Citations citations = gson.fromJson(data, Citations.class);
+		citations.init();
 		System.out.println(citations);
 		
 		//Récupération des auteurs
 		data = FileManager.loadFile(JSON_AUTEURS);
 		final Auteurs auteurs = gson.fromJson(data, Auteurs.class);
+		auteurs.init();
 		System.out.println(auteurs);
 		
 		//Récupération des sources
 		data = FileManager.loadFile(JSON_SOURCES);
 		final Sources sources = gson.fromJson(data, Sources.class);
+		sources.init();
 		System.out.println(sources);
 		
 		Model model = new Model(citations, auteurs, sources);

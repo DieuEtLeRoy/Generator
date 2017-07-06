@@ -10,7 +10,8 @@ public class Citation {
 
 	private int id;
 	private String contenu;
-
+	private String slug;
+	
 	private int source_id;
 
 	public void Citation() {
@@ -28,7 +29,9 @@ public class Citation {
 	public String getContenu() {
 		return this.contenu;
 	}
-	
+	public String getSlug() {
+		return this.slug;
+	}
 
 	
 	public int getSourceId() {
@@ -49,10 +52,28 @@ public class Citation {
 			content = new String(Files.readAllBytes(path), charset);
 			content = content.replaceAll(":citation_contenu", this.getContenu());
 			content = content.replaceAll(":citation_id", this.getIdString());
+			content = content.replaceAll(":citation_slug", this.getSlug());
+			
 			Files.write(path, content.getBytes(charset));
 		} catch (IOException e) {
 			System.out.println("ERREUR -- Lecture du fichier : " + path);
 			e.printStackTrace();
 		}
+	}
+
+
+
+	public void init() {
+		this.slug = "";
+		if(this.contenu.length()> 25){
+			this.slug += this.contenu.substring(0, 25);
+		}else{
+			this.slug += this.contenu;
+		}
+		this.slug = this.slug.replace(' ', '-');
+		this.slug = this.slug.replace('\'', '-');
+		this.slug = this.slug.toLowerCase();
+		this.slug += "-citation_" + this.id;
+		
 	}
 }

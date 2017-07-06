@@ -11,6 +11,7 @@ public class Source {
 	private int id;
 	private String nom;
 	private String date;
+	private String slug;
 	private int auteur_id;
 
 
@@ -19,6 +20,8 @@ public class Source {
 		this.nom = " ";
 		this.date = " ";
 		this.auteur_id = 0;
+		this.slug = " ";
+		
 	}
 
 	public int getId() {
@@ -35,6 +38,10 @@ public class Source {
 
 	public String getDate() {
 		return this.date;
+	}
+	
+	public String getSlug() {
+		return this.slug;
 	}
 	
 	public int getAuteurId() {
@@ -56,9 +63,21 @@ public class Source {
 			content = content.replaceAll(":source_nom", this.getNom());
 			content = content.replaceAll(":source_date", this.getDate());
 			content = content.replaceAll(":source_id", this.getIdString());
+			content = content.replaceAll(":source_slug", this.getSlug());
 			Files.write(path, content.getBytes(charset));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void init() {
+		this.slug = "";
+		if(!this.nom.equals("") && !this.nom.equals(" ")){
+			this.slug += this.nom + "-";
+		}
+		this.slug += "source_" + this.id;
+		this.slug = this.slug.replace(' ', '-');
+		this.slug = this.slug.replace('\'', '-');
+		this.slug = this.slug.toLowerCase();
 	}
 }
